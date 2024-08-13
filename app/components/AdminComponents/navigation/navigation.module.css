@@ -61,3 +61,25 @@
   width: 14px;
   height: 14px;
 }
+
+@media (max-width: 500px) {
+  /* Mobile Styles */
+  /* Adjust styles as needed */
+
+  /* :root {
+    --font-size-heading: 3.25rem;
+    --padding-main: 1rem;
+  } */
+  .admin_nav {
+    flex-direction: row;
+    column-gap: 2rem;
+    height: auto;
+    overflow-x: scroll;
+  }
+  .admin_nav ul {
+    display: flex;
+  }
+  .admin_nav ul li {
+    min-width: 55px;
+  }
+}

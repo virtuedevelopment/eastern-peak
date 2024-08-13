@@ -209,4 +209,14 @@
     --font-size-heading: 3.25rem;
     --padding-main: 1rem;
   }
+
+  .admin_layout {
+    flex-direction: column;
+  }
+
+  .fade-up-in {
+    opacity: 0;
+    animation: var(--fadeUpIn);
+    min-width: 100%;
+  }
 }

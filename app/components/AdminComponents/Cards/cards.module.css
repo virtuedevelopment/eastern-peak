@@ -39,3 +39,12 @@
 .trenddown p {
   font-size: var(--font-size-small);
 }
+
+@media (max-width: 500px) {
+  /* Mobile Styles */
+  /* Adjust styles as needed */
+
+  .dashboard_card {
+    min-width: 325px;
+  }
+}
