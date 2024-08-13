@@ -1,0 +1,81 @@
+.main {
+  background-color: var(--black);
+  padding: var(--padding-main);
+  flex-grow: 1;
+  min-height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+}
+.main * {
+  /* border: dashed 0.5px white; */
+}
+
+.welcome {
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  animation: var(--fadeUpIn);
+  opacity: 0;
+}
+.welcome h2 {
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+.welcome h2 span {
+  color: var(--color-secondary);
+}
+.welcome small {
+  color: var(--grey);
+  font-weight: 300;
+}
+
+.welcome .options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.welcome .options svg {
+  width: 25px;
+  height: 25px;
+  color: var(--color-secondary);
+}
+
+.primary_statistics {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.apps {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  flex-grow: 1;
+  animation: var(--fadeUpIn);
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.transactions {
+  border: dashed 1px var(--color-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-red);
+}
+.piechart {
+  border: dashed 1px var(--color-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-green);
+}

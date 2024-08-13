@@ -1,107 +1,212 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* CSS Root Variables Template */
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
+:root {
+  /* Shade Variables */
+  --white: #f7f7f7;
+  --black: #1e1e1e;
+  --light-grey: #eceae8;
+  --grey: #989796;
 
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
+  /* Color Variables */
+  --color-main: #4169e1;
+  --color-secondary: #40e0d0;
+  --color-red: lightcoral;
+  --color-green: lightgreen;
 
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
+  /* Border Radii */
+  --border-rad: 5px;
+
+  /* Padding */
+  --padding-main: 2rem;
+
+  /* Button Padding */
+  --button-padding: 0.75rem 1.75rem;
+  --button-padding-mobile: 0.5rem 0.75rem;
+
+  /* Font Families */
+  /* --body-style: ; */
+
+  /* Font Sizing */
+  --font-size-heading: 6rem;
+
+  --font-size-heading-max: calc(var(--font-size-heading) * 1.5);
+
+  --font-size-head: calc(var(--font-size-heading) * 0.85);
+
+  --font-size-subtitle: calc(var(--font-size-heading) * 0.66);
+
+  --font-size-subhead: calc(var(--font-size-heading) * 0.43);
+
+  --font-size-sub: calc(var(--font-size-heading) * 0.3);
+
+  --font-size-text: 1rem;
+
+  --font-size-small: 12px;
+
+  /* Transition and Effects */
+  --transition-normal: 0.4s ease-in-out;
+
+  --box-shadow-light: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  --box-shadow-heavy: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+
+  /* Animations */
+  --slidedown: slidedown 2s ease forwards;
+  --fadein: fadein 3s ease-in-out forwards;
+  --fadeUpIn: fadeUpIn 1s ease-in-out forwards;
+}
+
+/* Base Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  scroll-behavior: smooth;
+}
+
+* h1 {
+  font-size: var(--font-size-heading);
+  font-weight: 600;
+}
+* h2 {
+  font-size: var(--font-size-subtitle);
+  font-weight: 600;
+}
+* h3 {
+  font-size: var(--font-size-sub);
+  font-weight: 600;
+}
+* p {
+  font-size: var(--font-size-text);
+  font-weight: 300;
+}
+
+/* Layouts */
+.admin_layout {
+  display: flex;
+}
+
+/* Component and Utility Styles */
+
+.button1 {
+  border: none;
+  padding: var(--button-padding);
+  background-color: var(--color-main);
+  color: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  border-radius: var(--border-rad);
+  text-decoration: none;
+  font-weight: 300;
+}
+.button1:hover {
+  background-color: var(--white);
+  color: var(--color-main);
+  box-shadow: var(--box-shadow-heavy);
+  transition: var(--transition-normal);
+}
+
+.button2 {
+  border: none;
+  padding: var(--button-padding);
+  background-color: var(--color-secondary);
+  color: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  border-radius: var(--border-rad);
+  text-decoration: none;
+  font-weight: 300;
+}
+.button2:hover {
+  background-color: var(--white);
+  color: var(--color-secondary);
+  box-shadow: var(--box-shadow-heavy);
+  transition: var(--transition-normal);
+}
+
+.error {
+  color: red;
+  background-color: var(--white);
+  border-radius: var(--border-rad);
+  padding: 0.75rem;
+  text-align: center;
+  font-size: var(--font-size-small);
+}
+
+/* Animations */
+@keyframes slidedown {
+  from {
+    opacity: 0;
+    top: -100%;
+  }
+  to {
+    opacity: 1;
+    top: 0%;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeUpIn {
+  0% {
+    opacity: 0;
+    transform: translateY(
+      20px
+    ); /* Start slightly below the original position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
   }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.fade-up-in {
+  opacity: 0;
+  animation: var(--fadeUpIn);
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+/* Media Queries for Responsive Adjustments */
+
+/* Main */
+@media (min-width: 1200px) {
+  /* Tablet Styles */
+  /* Adjust styles as needed */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Tablet */
+@media (max-width: 1000px) {
+  /* Tablet Styles */
+  /* Adjust styles as needed */
+
+  :root {
+    --font-size-heading: 4rem;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+/* Cellphone */
+@media (max-width: 500px) {
+  /* Mobile Styles */
+  /* Adjust styles as needed */
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  :root {
+    --font-size-heading: 3.25rem;
+    --padding-main: 1rem;
   }
 }

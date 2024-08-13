@@ -1,0 +1,41 @@
+.dashboard_card {
+  border-radius: var(--border-rad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  min-width: 300px;
+  border: solid 1px var(--grey);
+}
+.dashboard_card .icon {
+  color: var(--color-main);
+  width: 45px;
+  height: 45px;
+  border-radius: 999px;
+  background-color: var(--white);
+  padding: 0.65rem;
+}
+.dashboard_card span p {
+  color: var(--white);
+  font-size: var(--font-size-text);
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.dashboard_card span small {
+  color: var(--grey);
+  font-size: var(--font-size-small);
+}
+
+.trendup {
+  color: green;
+}
+.trendup p {
+  font-size: var(--font-size-small);
+}
+.trenddown {
+  color: lightcoral;
+}
+.trenddown p {
+  font-size: var(--font-size-small);
+}
