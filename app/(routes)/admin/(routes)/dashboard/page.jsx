@@ -39,8 +39,8 @@ export default function AdminDashboard() {
         </div>
 
         <div className={styles.options}>
-          <Link className={styles.notifications} href={"/"}>
-            <Bell />
+          <Link className="button1" href={"/admin/notifications"}>
+            Notifications
           </Link>
 
           <Link className="button2" href={"/admin/profile"}>

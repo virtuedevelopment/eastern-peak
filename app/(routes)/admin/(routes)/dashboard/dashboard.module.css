@@ -86,9 +86,9 @@
   /* Adjust styles as needed */
 
   .welcome {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 0.5rem;
-    gap: 0.5rem;
+    gap: 1rem;
   }
   .primary_statistics {
     display: grid;

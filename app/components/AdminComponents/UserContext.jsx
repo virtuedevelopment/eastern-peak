@@ -99,6 +99,30 @@ export function UserProvider({ children }) {
     }
   };
 
+  //edit profile function
+  const editProfile = async ({ userid, newProfile }) => {
+    const updatedProfile = {
+      ...profile,
+      personal_information: {
+        ...profile.personal_information,
+        ...newProfile,
+      },
+    };
+
+    const { data, error } = await supabase
+      .from("eastern_peak_admin_profiles")
+      .update({ personal_information: updatedProfile.personal_information })
+      .eq("userid", userid);
+
+    if (error) {
+      console.error("Error updating profile:", error);
+      return { error: "Failed to update profile" };
+    } else {
+      setProfile(updatedProfile);
+      return { success: true };
+    }
+  };
+
   // Logout function
   const logout = async () => {
     console.log("Logging out...");
@@ -121,7 +145,9 @@ export function UserProvider({ children }) {
   };
 
   return (
-    <UserContext.Provider value={{ profile, isAuthenticated, login, logout }}>
+    <UserContext.Provider
+      value={{ profile, isAuthenticated, login, logout, editProfile }}
+    >
       {children}
     </UserContext.Provider>
   );

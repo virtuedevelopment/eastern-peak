@@ -1,0 +1,88 @@
+.main {
+  background-color: var(--black);
+  padding: var(--padding-main);
+  flex-grow: 1;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main * {
+  /* border: dashed 0.5px white; */
+}
+
+.main header {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  animation: var(--fadeUpIn);
+  opacity: 0;
+}
+.main header svg {
+  width: 45px;
+  height: 45px;
+  color: var(--color-secondary);
+  margin-right: 1rem;
+}
+.main header h2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+.main header h2 span {
+  color: var(--color-secondary);
+}
+.main header small {
+  color: var(--grey);
+  font-weight: 300;
+}
+
+.form {
+  padding: 1rem;
+  animation: var(--fadeUpIn);
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.form form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.form span {
+  display: block;
+  padding: 0.5rem;
+}
+.form span label {
+  display: block;
+  color: var(--grey);
+  font-size: var(--font-size-small);
+  margin-bottom: 0.75rem;
+}
+.form input {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  background-color: var(--light-grey);
+  color: var(--grey);
+  border-radius: var(--border-rad);
+  font-size: inherit;
+  border: none;
+}
+.form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  background-color: var(--light-grey);
+  color: var(--grey);
+  border-radius: var(--border-rad);
+  font-size: inherit;
+  border: none;
+  min-height: 150px;
+  resize: none;
+}
+
+@media (max-width: 500px) {
+  /* Mobile Styles */
+  /* Adjust styles as needed */
+}

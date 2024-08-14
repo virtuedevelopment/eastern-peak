@@ -168,7 +168,7 @@
   0% {
     opacity: 0;
     transform: translateY(
-      20px
+      50px
     ); /* Start slightly below the original position */
   }
   100% {
