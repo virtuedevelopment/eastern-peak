@@ -40,7 +40,7 @@ export default function ProfilePage() {
       <header>
         <h2>
           <CircleUserRound />
-          {profile.personal_information.firstName}'s Profile <span>.</span>
+          {`${profile.personal_information.firstName}'s Profile`} <span>.</span>
         </h2>
         <small>
           Keep your profile up to date to ensure accurate communication and
